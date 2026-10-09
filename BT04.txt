@@ -1,0 +1,25 @@
+SESSION05
+Bài 4 : Xử lý lỗi đường dẫn khi triển khai dự án
+
+Tên lớp: HCM K26 CNTT2
+Môn học: Nhập môn công nghệ thông tin
+Họ và tên: LƯƠNG THANH THƯ
+
+
+Phần 1: Lập bảng so sánh 
+
+Tiêu chí:	       A: Đường dẫn tuyệt đối                                      B: Đường dẫn tương đối
+                     C:\Users\An-K26\FarmProject\data\logs.csv	                      ../data/logs.csv
+ 
+Độ dài:	            Dài, phải ghi đầy đủ từ ổ đĩa đến file	              Ngắn, chỉ ghi vị trí so với file code
+
+Tính di động        Kém. Máy khác không có thư mục                            Tốt. Chỉ cần giữ nguyên cấu trúc project là
+khi gửi project	   C:\Users\An-K26\ nên báo lỗi không tìm thấy file	      chạy được trên mọi máy
+
+
+Phần 2: Giải pháp tối uu được chọn:
+
+Em chọn giải pháp B (đường dẫn tương đối), vì ngắn gọn và gửi project cho người khác vẫn chạy được, còn đường dẫn A chỉ đúng trên máy của An.
+
+Ý nghĩa của ký hiệu ..: dấu .. nghĩa là đi lên một cấp thư mục cha. File code nằm trong src/, nên .. đưa script ra thư mục FarmProject, sau đó mới đi vào data/logs.csv. Nhờ vậy script luôn tìm đúng file dù project được đặt ở đâu trên máy.
+ 
